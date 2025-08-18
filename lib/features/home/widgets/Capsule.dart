@@ -1,25 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:time_capsule/core/constants/app_colors.dart';
+import 'package:time_capsule/core/constants/app_dimensions.dart';
+import 'package:time_capsule/core/constants/app_icons.dart';
+import 'package:time_capsule/core/constants/app_images.dart';
+import 'package:time_capsule/core/constants/app_text_styles.dart';
 
 class Capsule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: Get.height * 0.01),
+      margin: EdgeInsets.only(bottom: AppDimensions.bottomMargin),
       padding: EdgeInsets.symmetric(
-          horizontal: Get.width * 0.03, vertical: Get.height * 0.02),
+          horizontal: AppDimensions.mediumSpacing,
+          vertical: AppDimensions.smallSpacing),
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
+        color: AppColors.cardBackground,
+        borderRadius: BorderRadius.circular(AppDimensions.cardBorderRadius),
         boxShadow: [
           BoxShadow(
-            color: Colors.black12,
+            color: AppColors.shadowColor,
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
         ],
         border: Border.all(
-          color: Colors.grey.shade200,
+          color: AppColors.borderColor,
           width: 1,
         ),
       ),
@@ -27,11 +32,11 @@ class Capsule extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           CircleAvatar(
-            radius: Get.width * 0.1,
-            backgroundImage: AssetImage("assets/images/random.png"),
+            radius: AppDimensions.avatarRadius,
+            backgroundImage: AssetImage(AppImages.randomImage),
           ),
           SizedBox(
-            width: Get.width * 0.04,
+            width: AppDimensions.mediumSpacing,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,28 +44,28 @@ class Capsule extends StatelessWidget {
             children: [
               Text(
                 "Family Memories",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                style: AppTextStyles.capsuleTitle,
               ),
               Text(
                 "Unlocks on 2025-12--25",
-                style: TextStyle(fontWeight: FontWeight.w400),
+                style: AppTextStyles.capsuleSubtitle,
               )
             ],
           ),
           SizedBox(
-            width: Get.width * 0.1,
+            width: AppDimensions.largeSpacing,
           ),
           SizedBox(
             child: Column(
               children: [
                 IconButton(
-                  icon: Icon(Icons.lock_outline),
-                  iconSize: 20,
+                  icon: Icon(AppIcons.lock),
+                  iconSize: AppDimensions.iconSize,
                   onPressed: () {},
                 ),
                 IconButton(
-                  icon: Icon(Icons.share_rounded),
-                  iconSize: 20,
+                  icon: Icon(AppIcons.share),
+                  iconSize: AppDimensions.iconSize,
                   onPressed: () {},
                 ),
               ],

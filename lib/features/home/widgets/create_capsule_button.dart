@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:time_capsule/core/constants/app_strings.dart';
+import 'package:time_capsule/core/constants/app_colors.dart';
+import 'package:time_capsule/core/constants/app_icons.dart';
+import 'package:time_capsule/core/constants/app_text_styles.dart';
+import 'package:time_capsule/core/constants/app_dimensions.dart';
 
 class CreateCapsuleButton extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -14,20 +17,20 @@ class CreateCapsuleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: Get.height * 0.05,
+      height: AppDimensions.buttonHeight,
       child: ElevatedButton.icon(
         onPressed: onPressed,
         label: const Text(
           AppStrings.createTimeCapsule,
-          style: TextStyle(fontSize: 18),
+          style: AppTextStyles.buttonText,
         ),
-        icon: const Icon(Icons.add),
+        icon: const Icon(AppIcons.add),
         style: ElevatedButton.styleFrom(
-          iconColor: Colors.white,
-          backgroundColor: Colors.blueAccent,
-          foregroundColor: Colors.white,
+          iconColor: AppColors.buttonIcon,
+          backgroundColor: AppColors.primaryButton,
+          foregroundColor: AppColors.buttonText,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(AppDimensions.buttonBorderRadius),
           ),
         ),
       ),

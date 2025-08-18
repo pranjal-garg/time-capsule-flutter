@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:time_capsule/core/constants/app_strings.dart';
+import 'package:time_capsule/core/constants/app_colors.dart';
+import 'package:time_capsule/core/constants/app_icons.dart';
+import 'package:time_capsule/core/constants/app_dimensions.dart';
 
 class CapsuleSearchBar extends StatelessWidget {
   final TextEditingController? controller;
@@ -17,7 +19,7 @@ class CapsuleSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: Get.height * 0.05,
+      height: AppDimensions.searchBarHeight,
       child: TextFormField(
         controller: controller,
         onChanged: onChanged,
@@ -25,15 +27,15 @@ class CapsuleSearchBar extends StatelessWidget {
         decoration: InputDecoration(
           suffixIcon: IconButton(
             onPressed: onMicPressed,
-            icon: const Icon(Icons.mic_outlined),
+            icon: const Icon(AppIcons.mic),
           ),
-          fillColor: Colors.grey.shade300,
+          fillColor: AppColors.searchBarFill,
           filled: true,
           hintText: AppStrings.searchHint,
-          prefixIcon: const Icon(Icons.search),
+          prefixIcon: const Icon(AppIcons.search),
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(AppDimensions.searchBorderRadius),
           ),
           contentPadding: EdgeInsets.zero,
         ),

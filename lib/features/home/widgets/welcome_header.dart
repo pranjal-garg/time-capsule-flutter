@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:time_capsule/core/constants/app_text_styles.dart';
 
 class WelcomeHeader extends StatelessWidget {
   final String userName;
@@ -12,10 +13,7 @@ class WelcomeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       'Welcome, $userName!',
-      style: const TextStyle(
-        fontSize: 25,
-        fontWeight: FontWeight.w700,
-      ),
+      style: AppTextStyles.welcomeHeader,
     );
   }
 }
