@@ -1,9 +1,11 @@
 import 'package:get/get.dart';
+import 'package:time_capsule/features/home/presentation/states/home_state.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  final HomeState state;
 
-  final count = 0.obs;
+  HomeController({required this.state});
+
   @override
   void onInit() {
     super.onInit();
@@ -18,6 +20,4 @@ class HomeController extends GetxController {
   void onClose() {
     super.onClose();
   }
-
-  void increment() => count.value++;
 }
