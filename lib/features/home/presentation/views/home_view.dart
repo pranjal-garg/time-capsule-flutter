@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:time_capsule/core/constants/app_sizes.dart';
-import 'package:time_capsule/core/constants/app_text_styles.dart';
+import 'package:time_capsule/features/home/presentation/widgets/capsule_search_bar.dart';
+import 'package:time_capsule/features/home/presentation/widgets/create_capsule_button.dart';
 
+import '../../../../core/constants/app_constants.dart';
 import '../controllers/home_controller.dart';
-import '../widgets/Capsule.dart';
+import '../widgets/capsule.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -20,7 +20,7 @@ class HomeView extends GetView<HomeController> {
         margin: EdgeInsets.only(
           left: AppSizes.w20,
           right: AppSizes.w20,
-          top: AppSizes.h20,
+          top: AppSizes.h10,
         ),
         child: Obx(
           () => Column(
@@ -31,38 +31,16 @@ class HomeView extends GetView<HomeController> {
                 style: AppTextStyles.welcomeTitle,
               ),
               SizedBox(height: AppSizes.h20),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  icon: Icon(FontAwesomeIcons.plus),
-                  onPressed: () {},
-                  label: Text("Create Time Capsule"),
-                ),
-              ),
+              CreateCapsuleButton(),
               SizedBox(height: AppSizes.h20),
-              SizedBox(
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    prefixIcon: Icon(
-                      FontAwesomeIcons.magnifyingGlass,
-                      size: AppSizes.v15,
-                    ),
-                    suffixIcon: Icon(
-                      FontAwesomeIcons.microphone,
-                      size: AppSizes.v15,
-                    ),
-                    hintText: "Search your capsules",
-                  ),
-                ),
-              ),
+              CapsuleSearchBar(),
               SizedBox(height: AppSizes.h20),
               Expanded(
                 child: ListView.builder(
-                  itemCount: controller.state.capsules.length,
-                  itemBuilder: (context, index) {
-                    return Capsule();
-                  },
-                ),
+                    itemCount: controller.state.capsules.length,
+                    itemBuilder: (context, index) => Capsule(
+                          title: controller.state.capsules[index],
+                        )),
               )
             ],
           ),
