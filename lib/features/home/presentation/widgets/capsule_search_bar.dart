@@ -9,9 +9,10 @@ class CapsuleSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      style: AppTextStyles.inputFieldText.copyWith(color: AppColors.black),
+      style: AppTextStyles.searchFieldText.copyWith(color: AppColors.black),
       cursorColor: AppColors.brightBlue,
       decoration: InputDecoration(
+        hintStyle: AppTextStyles.searchFieldText,
         prefixIcon: Icon(
           FontAwesomeIcons.magnifyingGlass,
           size: AppSizes.v15,

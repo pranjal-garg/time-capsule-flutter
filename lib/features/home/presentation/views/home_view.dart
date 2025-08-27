@@ -5,7 +5,7 @@ import 'package:time_capsule/features/home/presentation/widgets/create_capsule_b
 
 import '../../../../core/constants/app_constants.dart';
 import '../controllers/home_controller.dart';
-import '../widgets/capsule.dart';
+import '../../../../core/widgets/common/capsule.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});

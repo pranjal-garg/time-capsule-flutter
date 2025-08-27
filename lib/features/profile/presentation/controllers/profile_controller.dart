@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
-import 'package:time_capsule/features/add_capsule/presentation/add_capsule_state.dart';
+import 'package:time_capsule/features/profile/states/profile_state.dart';
 
-class AddCapsuleController extends GetxController {
-  final AddCapsuleState state;
+class ProfileController extends GetxController {
+  final ProfileState state;
 
-  AddCapsuleController({required this.state});
+  ProfileController({ required this.state});
+
   final count = 0.obs;
   @override
   void onInit() {

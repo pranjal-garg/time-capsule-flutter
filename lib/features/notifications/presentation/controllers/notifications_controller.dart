@@ -1,11 +1,13 @@
 import 'package:get/get.dart';
-import 'package:time_capsule/features/add_capsule/presentation/add_capsule_state.dart';
+import 'package:time_capsule/features/notifications/presentation/states/notifications_state.dart';
 
-class AddCapsuleController extends GetxController {
-  final AddCapsuleState state;
+class NotificationsController extends GetxController {
+  final NotificationsState state;
 
-  AddCapsuleController({required this.state});
+  NotificationsController({required this.state});
+
   final count = 0.obs;
+
   @override
   void onInit() {
     super.onInit();

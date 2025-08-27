@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../../../core/constants/app_constants.dart';
+import '../../constants/app_constants.dart';
 
 class Capsule extends StatelessWidget {
   final String title;
@@ -45,7 +45,7 @@ class Capsule extends StatelessWidget {
                   "Unlocks on 2025-12-25",
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
-                  style: AppTextStyles.inputFieldText
+                  style: AppTextStyles.searchFieldText
                       .copyWith(fontSize: AppSizes.sp12),
                 ),
               ],

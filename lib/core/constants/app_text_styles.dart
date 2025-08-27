@@ -38,9 +38,28 @@ class AppTextStyles {
     fontSize: AppSizes.sp16,
   );
 
+  static TextStyle searchFieldText = GoogleFonts.inter(
+      fontWeight: FontWeight.w400,
+      fontSize: AppSizes.sp14,
+      color: AppColors.mediumGray);
+
   static TextStyle inputFieldText = GoogleFonts.inter(
-    fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w400,
+      fontSize: AppSizes.sp16,
+      color: AppColors.black);
+
+  static TextStyle poppinsLargeTitle = GoogleFonts.poppins(
+      fontWeight: FontWeight.w700,
+      fontSize: AppSizes.sp22,
+      color: AppColors.darkTeal);
+
+  static TextStyle poppinsSubTitle = GoogleFonts.poppins(
+      fontWeight: FontWeight.w400,
+      fontSize: AppSizes.sp12,
+      color: AppColors.mediumGray);
+
+  static TextStyle aboutText = GoogleFonts.poppins(
     fontSize: AppSizes.sp14,
-    color: AppColors.mediumGray
+    fontWeight: FontWeight.w500,
   );
 }

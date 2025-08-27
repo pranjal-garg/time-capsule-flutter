@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:time_capsule/core/constants/app_constants.dart';
 
 class CustomFormField extends StatelessWidget {
 
@@ -10,33 +11,19 @@ class CustomFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(
-        top: Get.height * 0.05,
-      ),
-      width: double.infinity,
+      margin: EdgeInsets.only(bottom: AppSizes.h20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             labelText,
-            style: TextStyle(
-              fontSize: Get.width * 0.05,
-              fontWeight: FontWeight.w400,
-            ),
-            textAlign: TextAlign.left,
+            style: AppTextStyles.buttonText,
           ),
           TextFormField(
             decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(
-                horizontal: Get.width * 0.03,
-              ),
               hintText: hintText,
-              filled: true,
-              fillColor: Color(0xFFEBEDED),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide.none,
-                borderRadius: BorderRadius.circular(12),
-              ),
+              hintStyle: AppTextStyles.inputFieldText,
+
             ),
           )
         ],

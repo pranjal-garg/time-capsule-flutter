@@ -3,5 +3,5 @@ class AppImages {
   static const String _assetsPath = 'assets/images/';
   
   // Image paths
-  static const String randomImage = '${_assetsPath}random.png';
+  static const String addScreen = '${_assetsPath}add.png';
 }

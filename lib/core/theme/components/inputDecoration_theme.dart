@@ -15,7 +15,6 @@ class RInputDecorationTheme {
     suffixIconColor: AppColors.mediumGray,
     fillColor: AppColors.softGray,
     filled: true,
-    hintStyle: AppTextStyles.inputFieldText,
     enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppSizes.r8),
         borderSide: BorderSide.none),
