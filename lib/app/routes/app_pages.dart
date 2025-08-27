@@ -4,19 +4,19 @@ import '../../features/add_capsule/presentation/bindings/add_capsule_binding.dar
 import '../../features/add_capsule/presentation/views/add_capsule_view.dart';
 import '../../features/home/presentation/bindings/home_binding.dart';
 import '../../features/home/presentation/views/home_view.dart';
+import '../../features/mainScreen/presentation/bindings/main_screen_binding.dart';
+import '../../features/mainScreen/presentation/views/main_screen_view.dart';
 import '../../features/notifications/presentation/bindings/notifications_binding.dart';
 import '../../features/notifications/presentation/views/notifications_view.dart';
-import '../../features/profile/bindings/profile_binding.dart';
-import '../../features/profile/views/profile_view.dart';
-import '../../features/mainScreen/bindings/main_screen_binding.dart';
-import '../../features/mainScreen/views/main_screen_view.dart';
+import '../../features/profile/presentation/bindings/profile_binding.dart';
+import '../../features/profile/presentation/views/profile_view.dart';
 
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  static var INITIAL = Routes.MAIN_SCREEN;
+  static var INITIAL = Routes.ADD_CAPSULE;
 
   static final routes = [
     GetPage(

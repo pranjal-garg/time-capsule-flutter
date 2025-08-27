@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import 'package:time_capsule/features/mainScreen/states/main_screen_state.dart';
+
+import '../states/main_screen_state.dart';
 
 class MainScreenController extends GetxController {
   MainScreenState state;

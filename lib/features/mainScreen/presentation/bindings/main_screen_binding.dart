@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:time_capsule/features/mainScreen/states/main_screen_state.dart';
 
 import '../controllers/main_screen_controller.dart';
+import '../states/main_screen_state.dart';
 
 class MainScreenBinding extends Bindings {
   @override

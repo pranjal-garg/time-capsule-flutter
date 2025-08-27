@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:time_capsule/features/profile/states/profile_state.dart';
 
 import '../controllers/profile_controller.dart';
+import '../states/profile_state.dart';
 
 class ProfileBinding extends Bindings {
   @override
