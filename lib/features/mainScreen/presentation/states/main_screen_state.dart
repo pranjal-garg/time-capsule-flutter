@@ -9,4 +9,5 @@ class MainScreenState extends GetXState {
     BottomNavigationBarItem(icon: Icon(Icons.add_box), label: "Create"),
     BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
   ];
+  final Set<int> initializedTabs = <int>{};
 }
